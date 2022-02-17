@@ -70,6 +70,15 @@
         [-118.81782531738281, 34.01766474288581]  //Longitude, latitude
     ]
  };
+ 
+ const polyline2 = {
+    type: "polyline",
+    paths: [
+        [-118.7980842590332, 34.0089849673007], //Longitude, latitude
+        [-118.79314899444581, 34.00702833795961] //Longitude, latitude
+    ]
+ };
+    
  const simpleLineSymbol = {
     type: "simple-line",
     color: "#fa007d", // pink
@@ -80,37 +89,55 @@
     geometry: polyline1,
     symbol: simpleLineSymbol
  });
+    
+ const polylineGraphic2 = new Graphic({
+    geometry: polyline2,
+    symbol: simpleLineSymbol
+ });
+    
  graphicsLayer.add(polylineGraphic1);
+ graphicsLayer.add(polylineGraphic2);
 
  // Create a polygon geometry
  const polygon1 = {
     type: "polygon",
     rings: [
             [-118.80623817443846, 34.00357744543739], //longitude, latitude
-            [-118.79804134368896, 34.008949392624146],
-            [-118.7955093383789, 34.013147101573],
-            [-118.79533767700195, 34.016917747919564],
-            [-118.79782676696777, 34.019300994604336],
-            [-118.8007879257202, 34.020403668189765],
-            [-118.80319118499756, 34.01994125843019],
-            [-118.80550861358641, 34.01766474288581],
-            [-118.80825519561769, 34.019870118243574],
-            [-118.81061553955078, 34.02019024861374],
-            [-118.81392002105713, 34.01862515532651],
-            [-118.81619453430176, 34.01545931023131],
-            [-118.8152503967285, 34.0118308931348],
-            [-118.81087303161623, 34.00663700668146]
+            [-118.79804134368896, 34.008949392624146], //Longitude, latitude
+            [-118.7955093383789, 34.013147101573], //Longitude, latitude
+            [-118.79533767700195, 34.016917747919564], //Longitude, latitude
+            [-118.79782676696777, 34.019300994604336], //Longitude, latitude
+            [-118.8007879257202, 34.020403668189765], //Longitude, latitude
+            [-118.80319118499756, 34.01994125843019], //Longitude, latitude
+            [-118.80550861358641, 34.01766474288581], //Longitude, latitude
+            [-118.80825519561769, 34.019870118243574], //Longitude, latitude
+            [-118.81061553955078, 34.02019024861374], //Longitude, latitude
+            [-118.81392002105713, 34.01862515532651], //Longitude, latitude
+            [-118.81619453430176, 34.01545931023131], //Longitude, latitude
+            [-118.8152503967285, 34.0118308931348], //Longitude, latitude
+            [-118.81087303161623, 34.00663700668146] //Longitude, latitude
     ]
  };
  const polygon2 = {
      type: "polygon",
      rings: [
-         [-118.81829738616943, 34.01794931066773],
-         [-118.81799697875975, 34.017469101982385],
-         [-118.81761074066162, 34.01794931066773]
+         [-118.81829738616943, 34.01794931066773], //Longitude, latitude
+         [-118.81799697875975, 34.017469101982385], //Longitude, latitude
+         [-118.81761074066162, 34.01794931066773] //Longitude, latitude
      ]
  };
-
+ const polygon3 = {
+     type: "polygon",
+     rings: [
+         [-118.79305176436901, 34.00657002437141], //Longitude, latitude
+         [-118.7931215018034, 34.00701916615341], //Longitude, latitude
+         [-118.7926172465086, 34.00715257414593], //Longitude, latitude
+         [-118.79423193633555, 34.00781071717505], //Longitude, latitude
+         [-118.79476837813856, 34.00767286331422], //Longitude, latitude
+         [-118.794671818614, 34.00732155730225] //Longitude, latitude
+      ]
+ };
+    
  const simpleFillSymbol = {
     type: "simple-fill",
     color: [250, 0, 125, 0.8],  // pink, opacity 80%
@@ -137,13 +164,20 @@
     popupTemplate: popupTemplate
 
  });
+ 
  const polygonGraphic2 = new Graphic({
     geometry: polygon2,
     symbol: simpleFillSymbol
  });
+    
+ const polygonGraphic3 = new Graphic({
+    geometry: polygon3,
+    symbol: simpleFillSymbol
+ }); 
+ 
  graphicsLayer.add(polygonGraphic1);
  graphicsLayer.add(polygonGraphic2);
-
+ graphicsLayer.add(polygonGraphic3);
  });
 </script>
 </head>
