@@ -34,8 +34,8 @@
 
   const view = new MapView({
     map: map,
-    center: [-118.80500,34.02700], //Longitude, latitude
-    zoom: 13,
+    center: [-118.80533695220947, 34.012364493609525], //Longitude, latitude
+    zoom: 15,
     container: "viewDiv"
  });
 
@@ -102,6 +102,14 @@
             [-118.81087303161623, 34.00663700668146]
     ]
  };
+ const polygon2 = {
+     type: "polygon",
+     rings: [
+         [-118.81829738616943, 34.01794931066773],
+         [-118.81799697875975, 34.017469101982385],
+         [-118.81761074066162, 34.01794931066773]
+     ]
+ };
 
  const simpleFillSymbol = {
     type: "simple-fill",
@@ -121,7 +129,7 @@
     Description: "Happy Valentines Day."
  }
 
- const polygonGraphic = new Graphic({
+ const polygonGraphic1 = new Graphic({
     geometry: polygon1,
     symbol: simpleFillSymbol,
 
@@ -129,7 +137,12 @@
     popupTemplate: popupTemplate
 
  });
- graphicsLayer.add(polygonGraphic);
+ const polygonGraphic2 = new Graphic({
+    geometry: polygon2,
+    symbol: simpleFillSymbol
+ });
+ graphicsLayer.add(polygonGraphic1);
+ graphicsLayer.add(polygonGraphic2);
 
  });
 </script>
